@@ -1,0 +1,4 @@
+name,	charge (C),		mass (g),	position (m),	velocity (m/s)
+a,		5e-2,			inf,		(-25, 0),		(0, 0)
+b,		5e-2,			inf,		(25, 0),		(0, 0)
+c, 		1e-2, 			30, 		(0, 0),			(10, 0)
