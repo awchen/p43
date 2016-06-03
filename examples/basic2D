@@ -1,0 +1,3 @@
+name, 	charge (C), 	mass (g),	position (m), 	velocity (m/s), 	acceleration (m/s^2)
+a, 		25, 			1,			(0, -25), 		(0, 0),				(0, 0)
+b, 		-25, 			1,			(0, 25), 		(0, 0), 			(0, 0)

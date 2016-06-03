@@ -1,0 +1,2 @@
+
+Each charge in the graph has a point representation on the graph, with the area of the point equal to the charge of the charge (note that this results in neutral charges having a size of 0, so any neutral charges are effectively discarded).
