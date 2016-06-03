@@ -6,7 +6,7 @@ import time
 import copy
 from math import *
 
-TIME_INTERVAL = 0.0001 #seconds
+TIME_INTERVAL = 0.025 #seconds
 k = 8.988e9
 
 class Charge:
@@ -178,7 +178,10 @@ def main():
     plt.axis( viewpoint )
     posOffset = (viewpoint[3] - viewpoint[2]) / 100
 
-    timeInterval = TIME_INTERVAL
+    if args.t is not None:
+        timeInterval = args.t
+    else:
+        timeInterval = TIME_INTERVAL
 
     prev = []
     while(True):
