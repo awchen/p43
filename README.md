@@ -22,6 +22,8 @@ python coulomb.py filepath [--t interval]
 
 `--t interval` is an optional argument that specifies the time interval in seconds between state updates.  Larger values will enable the plot to be updated in real-time, at the cost of accuracy, while smaller values require more computational power but will result in more accurate state updates (more detail below).    `interval` must be a valid float.
 
+`-v` is an optimal flag that tells the script to print out the timestamped states of the charges after each update to `STDOUT`.
+
 Because `matplotlib` is typically not used with live updates, there is no consistent method to cleanly exit from the program, and `SIGINT` is typically ineffective.  Therefore, the optimal method to exit the program is to kill the program with `CTRL + \`.
 
 #### Input file format
