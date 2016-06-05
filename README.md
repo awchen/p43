@@ -2,7 +2,7 @@
 
 ___
 
-### Visualization of charged particle movement
+## \#1 Visualization of charged particle movement
 
 #### Description
 
@@ -62,3 +62,14 @@ With `interval = 0.025`, the rightmost (+x) point on the path that particle `b` 
 
 On the other hand, with `interval = 0.0001`, the rightmost point on the first loop that `b` takes has value `(10.000570926612356, -0.00018607259310355348)`, which is 10.0005709 meters from the center, for a substantially better error of 0.0005709 meters.
 ___
+
+## \#2 Addressing the Parallel Capacitor Paradox
+
+#### Description
+
+This is a paper `Parallel_Paradox.pdf` that:
+
+- Outlines the scientific premise of the parallel capacitor paradox
+- Comprehensively derives a quantitative solution for the charge on the capacitors as a function of time
+- Demonstrates with mathematical derivations that the usage of ohmic wires fully explains the "disappearance" of energy
+- Explores a hypothesis involving inductance and electromagnetic waves to explain the decrease in energy between the capacitors given superconducting wires
