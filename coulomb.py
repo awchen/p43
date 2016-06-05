@@ -125,7 +125,13 @@ def scaleVec(a, scale):
 def unitVec(a):
     return scaleVec(a, 1 / length(a))
 
-def update(charges, timeInterval):
+def update(charges, timeInterval, verbose):
+
+    if verbose is True:
+        for c in charges:
+            print ("%s, q = %s, m = %s, position = %s, v = %s" % \
+                    (c.name, c.q, c.m, c.pos, c.v))
+
     newCharges = copy.deepcopy(charges)
     forces = [(0,) * len(charges[0].pos)] * len(charges)
     for i in range(len(charges)):
@@ -143,8 +149,6 @@ def update(charges, timeInterval):
         new.a = scaleVec( forces[i], 1 / old.m )
         new.v = addVec( old.v, scaleVec(new.a, timeInterval) )
         new.pos = addVec( old.pos, addVec( scaleVec(old.v, timeInterval), scaleVec(old.a, 0.5 * timeInterval**2) ) )
-        if new.m != float("inf"):
-            print new.pos
 
     return newCharges
 
@@ -155,12 +159,20 @@ def main():
                + 'The format of this file can be found in the README.')
     parser.add_argument('--t', type=float, nargs=1, \
             help='The amount of time in seconds to elapse between each state update.  Default 0.025.')
+    parser.add_argument('-v', action='store_true', \
+            help='Print out the timestamped charge states after each update.\n'  \
+               + 'May incur substantial computational penalty.')
 
     args = parser.parse_args()
 
     filepath = args.filepath[0]
     charges = parseFile(filepath)
     
+    if args.v is True:
+        verbose = True
+    else:
+        verbose = False
+
     allM = [c.m for c in charges]
     if len(allM) > 0:
         mRange = (min(allM), max(allM))
@@ -183,11 +195,16 @@ def main():
     else:
         timeInterval = TIME_INTERVAL
 
+    n = 0
     prev = []
     while(True):
         try:
+            if verbose is True:
+                print 
+                print ("After %s seconds:" % (timeInterval * n))
             prev = plot(plt, prev, charges, posOffset)
-            charges = update(charges, timeInterval)
+            charges = update(charges, timeInterval, verbose)
+            n += 1
         except KeyboardInterrupt:
             exit(0)
 

@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage[linewidth=0.5pt]{mdframed}
+
+%\usepackage[letterpaper, margin=1.5in]{geometry}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\relpenalty=10000
+\binoppenalty=10000
+
+\usepackage{subcaption} 
+ 
+\addtolength{\jot}{1em} 
+\renewcommand{\baselinestretch}{1.15} 
+ 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\usepackage[shortlabels]{enumitem}
+\setlist{  
+  listparindent=1.5em,
+  parsep=0.5em,
+}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+ 
+\usepackage[font=small,labelfont=bf]{caption} 
+ 
+ \usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\setlength\PreviewBorder{5pt}% 
+\usetikzlibrary{arrows}
+ 
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\renewcommand\thesubsection{\thesection.\roman{subsection}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt plus 1pt minus 1pt}
+
+\def\hyphen{{\hbox{-}}}
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\newcommand{\san}[1]{\textsf{#1}}
+\newcommand{\p}[1]{\ensuremath{\operatorname{\textsf{P}}\!\left(#1\right)}}
+\newcommand{\phat}[1]{\ensuremath{\operatorname{\hat{\textsf{P}}}\!\left(#1\right)}}
+\newcommand{\vt}{\,\vert\,}
+\newcommand{\call}[2]{\textsc{#1}({#2})}
+\newcommand{\ev}{\Big|}
+\newcommand{\arr}[1]{\texttt{arr[$#1$]}}
+\newcommand{\Var}[1]{\operatorname{Var}(#1)}
+\newcommand{\Cov}[1]{\operatorname{Cov}(#1)}
+\newcommand{\Corr}[1]{\operatorname{\uprho}(#1)}
+\newcommand{\s}{\text{s}}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-2mu#1\mkern-1mu}\mkern 1.5mu}
+\newcommand{\pluseq}{\mathrel{+}=}
+\newcommand{\asteq}{\mathrel{*}=}
+
+\setlength{\parindent}{4em}
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\title{Magnetic Mirroring}
+\author{Andrew Chen (achen28)}
+
+\begin{document}
+\maketitle
+
+\setlength{\abovedisplayskip}{1.5em}
+\setlength{\belowdisplayskip}{1.5em}
+\setlength{\abovedisplayshortskip}{1.5em}
+\setlength{\belowdisplayshortskip}{1.5em} 
+
+
+
+\end{document}
