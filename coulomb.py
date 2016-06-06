@@ -178,6 +178,7 @@ def main():
         mRange = (min(allM), max(allM))
     else:
         mRange = (0, 0)
+        
     if mRange[0] == mRange[1]:
         for c in charges:
             c.size = 20
